@@ -33,5 +33,5 @@ There are 2 parts to a WebSocket Protocol:
 * Socket - A *communication endpoint* that allows processes to communicate over a network
 
 ### References
-[What are WebSockets and How Do They Work?](https://www.diffusiondata.com/what-are-web-sockets-and-how-do-they-work/#:~:text=WebSockets%20work%20by%20establishing%20a,between%20the%20client%20and%20server.)
-[Medium: How JavaScript Works: Understanding WebSockets in NodeJS and Socket.io](https://medium.com/sessionstack-blog/how-javascript-works-understanding-websockets-in-nodejs-with-socket-io-24bc9e584eed#:~:text=The%20WebSocket%20API%20enables%20us,data%20flow%20in%20our%20application.)
+* [What are WebSockets and How Do They Work?](https://www.diffusiondata.com/what-are-web-sockets-and-how-do-they-work/#:~:text=WebSockets%20work%20by%20establishing%20a,between%20the%20client%20and%20server.)
+* [Medium: How JavaScript Works: Understanding WebSockets in NodeJS and Socket.io](https://medium.com/sessionstack-blog/how-javascript-works-understanding-websockets-in-nodejs-with-socket-io-24bc9e584eed#:~:text=The%20WebSocket%20API%20enables%20us,data%20flow%20in%20our%20application.)
