@@ -1,0 +1,11 @@
+{
+  "name": "websockets-implementation",
+  "version": "1.0.0",
+  "description": "Short project that features a Chat Client whose purpose is to implement browser WebSockets using NodeJS and JavaScript.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
