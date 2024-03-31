@@ -1,32 +1,43 @@
 import express from 'express'
 import { createServer } from 'node:http'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
 import { Server } from 'socket.io'
+import { getFilePath } from './modules/utils.js'
 
 const app = express()
 const server = createServer(app)
 const io = new Server(server)
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
 const PORT = 3000
 
 // middleware
-app.use(express.static(join(__dirname, "src"))) // allows the server to host static files from this endpoint ('src' folder)
+app.use(express.static("public")) // allows the server to host static files from this endpoint ('public' folder)
+app.use(express.static("src")) // allows the server to host static files from this endpoint ('src' folder)
 
+// navigation and file hostings
 app.get('/', (_, res) => {
-  const fileToSend = join(__dirname, "src", "index.html")
-  res.sendFile(fileToSend)
+  // redirect user to login page
+  res.send("<script> window.location.href = `${window.location.protocol}//${window.location.host}/login` </script>")
 })
 
+app.get('/login', (_, res) => {
+  // const fileToSend = join(__dirname, "public", "login.html")
+  res.sendFile(getFilePath("public", "login.html"))
+})
+
+app.get('/chat', (_, res) => {
+  res.sendFile(getFilePath("public", "chat.html"))
+})
+
+// Web Socket Logic
 io.on('connection', socket => {
+  console.log("a user has connected")
+
   socket.on("chat message", msg => {
     // socket.broadcast.emit("chat message", msg)
     io.emit("chat message", msg)
   })
 
   socket.on('disconnect', () => {
-    console.log("user has disconnected")
+    console.log("a user has disconnected")
   })
 })
 
