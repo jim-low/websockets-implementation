@@ -12,3 +12,4 @@ The purpose of this project is to learn the basics of how WebSockets work in gen
 ### Are there alternatives to WebSockets?
 
 ### References
+(What are WebSockets and How Do They Work?)[https://www.diffusiondata.com/what-are-web-sockets-and-how-do-they-work/#:~:text=WebSockets%20work%20by%20establishing%20a,between%20the%20client%20and%20server.]
