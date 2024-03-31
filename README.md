@@ -4,7 +4,8 @@ The purpose of this project is to learn the basics of how WebSockets work in gen
 
 ## Tools used
 1. NodeJS
-2. Socket.IO (NPM package)
+2. Socket.IO
+3. ExpressJS
 
 ## Implementation Method
 
