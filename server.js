@@ -19,7 +19,6 @@ app.get('/', (_, res) => {
 })
 
 app.get('/login', (_, res) => {
-  // const fileToSend = join(__dirname, "public", "login.html")
   res.sendFile(getFilePath("public", "login.html"))
 })
 
@@ -32,7 +31,6 @@ io.on('connection', socket => {
   console.log("a user has connected")
 
   socket.on("chat message", msg => {
-    // socket.broadcast.emit("chat message", msg)
     io.emit("chat message", msg)
   })
 
